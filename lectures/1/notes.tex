@@ -1,0 +1,33 @@
+\documentclass[twocolumn]{article}
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.5pt}
+\begin{document}
+    \pagestyle{fancy}
+    \fancyhead[L]{Parallel Scientific Computing}
+    \fancyhead[R]{Lecture 1}
+    \fancyfoot[L]{Computer Science}
+    \fancyfoot[C]{}
+    \fancyfoot[R]{Page \thepage}
+    \setcounter{section}{0}
+    \section{Introduction}
+    Generally, when answering a question with a simulation process, we do the following:
+    \begin{enumerate}
+        \item Define the process we want to model.
+        \item Build a mathematical model of the process.
+        \item Write a numerical algorithm solving the model.
+        \item Write simulation code implementing the algorithm.
+        \item Visualise results.
+        \item Produce a statement, or a tool from the results.
+    \end{enumerate}
+    Each step may involve going backwards, in order to validate previous steps.
+    \subsection{Models}
+    A model is a simplified representation of a real system. It is a mathematical description of the system, which is used to predict the behaviour of the system. For example, ordinary or partial differential equations are common models for natural processes:
+    \[F = ma = m \frac{d^2x}{dt^2}\]
+    A few examples of models:
+    \begin{itemize}
+        \item The Millenium-XXL Project is an $N$-body methods model simulating the generation of galaxy clusters in order to evaluate how plausible the "cold dark matter" hypothesis is.
+        \item Another $N$-body methods model: Particulate Flow Simulation. This simulates blood flow in order to better understand issues caused by deformed blood cells.
+        \item Micro and nano simulations are useful for modelling environments where usual patterns no longer hold.
+    \end{itemize}
+    Many models are based on differential equations. These usually have some core assumption of \emph{equilibrium} (where some derivative is equal to zero). For example, a heat transfer model might assume that in a model involving vertices connected by edges, the temperature of each vertex is equal to the average of the temperatures of its neighbours.
+\end{document}
